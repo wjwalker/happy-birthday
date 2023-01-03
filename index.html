@@ -163,6 +163,10 @@
             const text = '陈小舌，生日在今朝，快乐随心要，好运也来到，福气加鞭到，礼物满怀抱，欢歌来陪笑，生日快乐歌，萦萦耳边绕，祝福也驾到，生日快乐报，祝你生日快乐，哈哈哈哈'.split('，')
             for (let i = 0; i < text.length; i++) {
                 await awaitSendText(text[i], 45, i === 0 ? 100 : 40)
+                if (i === text.length - 2) {
+                    let bxImg = document.querySelector('#bx-img')
+                    bxImg.style.visibility = 'visible'
+                }
             }
             run()
         }
@@ -174,11 +178,11 @@
             video1.src = "https://m701.music.126.net/20230103235523/2b8d8e7d0c7d3f31608e4febdfca7388/jdyyaac/040b/0658/035a/3af046eb7812555c567c403b75bc5ddf.m4a"
             video1.play()
         }
-        let tid = setTimeout(() => {
-            let bxImg = document.querySelector('#bx-img')
-            bxImg.style.visibility = 'visible'
-            clearTimeout(tid)
-        }, 20000);
+        // let tid = setTimeout(() => {
+        //     let bxImg = document.querySelector('#bx-img')
+        //     bxImg.style.visibility = 'visible'
+        //     clearTimeout(tid)
+        // }, 20000);
     </script>
 </body>
 
